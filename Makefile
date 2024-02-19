@@ -71,7 +71,7 @@ WHITE       = \033[1;37m
 all: $(NAME) mlx
 
 $(NAME): $(OBJS)
-	$(CC) $(FLAGS) -L ${MLX} -o $@ $^ -lmlx -lXext -lX11 -lm -lz
+	$(CC) $(FLAGS) -L ${MLX} -o $@ $^ -lXext -lX11 -lm -lz
 	@echo "$(GREEN)Project successfully compiled"
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c $(HEADER)/$(NAME).h
